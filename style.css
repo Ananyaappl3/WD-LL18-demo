@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #eceef0;
+  background: #01182e;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   color: #222;
   margin: 0;
@@ -29,7 +29,7 @@ h1 {
   margin-bottom: 0;
   font-size: 52px;
   font-weight: bold;
-  color: #4568dc;
+  color: #e6b63d;
   letter-spacing: 0;
   line-height: 1.15;
   display: flex;
@@ -53,7 +53,7 @@ p {
 #random-btn {
   margin: 0 auto 10px auto;
   display: block;
-  background: linear-gradient(90deg, #5a6fff 0%, #7092ff 100%);
+  background: linear-gradient(90deg, #fcc741 0%, #fa9f30 100%);
   color: #fff;
   border: none;
   border-radius: 24px;
@@ -62,24 +62,24 @@ p {
   font-family: inherit;
   font-weight: 800;
   letter-spacing: 1px;
-  box-shadow: 0 4px 20px rgba(90, 110, 255, 0.10);
+  box-shadow: 0 4px 20px rgba(127, 16, 1, 0.836);
   cursor: pointer;
   transition: background 0.18s, transform 0.12s, box-shadow 0.18s;
 }
 #random-btn:hover, #random-btn:focus {
-  background: linear-gradient(90deg, #7092ff 0%, #5a6fff 100%);
+  background: linear-gradient(90deg, #fcc741 0%, #fa9f30 100%);
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 8px 32px rgba(90, 110, 255, 0.16);
+  box-shadow: 0 8px 32px rgba(127, 16, 1, 0.836);
 }
 #random-btn:active {
-  background: #4669cc;
+  background: #fcc741;
   transform: scale(0.98);
 }
 
 #recipe-display {
-  background: #fff;
+  background: #154080;
   border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(70,100,220,0.06);
+  box-shadow: 0 2px 8px rgba(200, 210, 251, 0.654);
   padding: 24px;
 }
 #recipe-display img {
@@ -307,4 +307,52 @@ p {
   height: 40px;
   margin-bottom: 0;
   flex-shrink: 0;
+}
+
+/* Recommendations floating box */
+.recommend-box {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(30,40,90,0.12);
+  padding: 12px;
+  z-index: 1000;
+  font-size: 14px;
+}
+.recommend-box h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #4568dc;
+}
+.recommend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 260px;
+  overflow: auto;
+}
+.recommend-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+.recommend-item img {
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.recommend-item span {
+  font-size: 13px;
+  color: #222;
+}
+
+/* Hide the floating box on small screens to avoid covering content */
+@media (max-width: 900px) {
+  .recommend-box { display: none; }
 }

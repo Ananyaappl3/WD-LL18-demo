@@ -25,7 +25,12 @@
       <ul id="saved-recipes-list"></ul>
     </div>
 
-    <div id="recipe-display"></div>
+    <div id="recipe-display">
+      <button id="save-btn" class="accent-btn">
+        <span class="material-symbols-outlined icon-btn">bookmark</span>
+        Save Recipe
+      </button>
+    </div>
 
     <div class="remix-container">
       <div class="remix-controls">
@@ -51,6 +56,12 @@
       <div id="remix-output" class="remix-box"></div>
     </div>
   </main>
+  <!-- Floating recommendations box (populated by JS) -->
+  <aside id="recommendations" class="recommend-box" aria-label="Recommended recipes" hidden>
+    <h4>Quick Picks</h4>
+    <div id="recommend-list" class="recommend-list">Loading...</div>
+    <button id="refresh-recs" class="accent-btn" style="margin-top:8px;">Refresh</button>
+  </aside>
   <script src="secrets.js"></script>
   <script src="script.js"></script>
 </body>
